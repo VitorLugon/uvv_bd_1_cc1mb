@@ -42,7 +42,7 @@
   <table id="TAB10" populated="true" UUID="8a86ba7d-8663-4e29-9a56-28efb9150e8e" name="dependente" objectType="TABLE" physicalName="dependente" >
    <remarks>Tabela que armazena as informações dos dependentes dos funcionários.</remarks>
    <folder id="FOLTAB101" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL11" populated="true" UUID="aa87eb75-11d7-4dbf-adf2-8272118527a4" autoIncrement="false" autoIncrementSequenceName="funcionario_cpf_funcionario _seq" defaultValue="" name="cpf_funcionario " nullable="0" physicalName="cpf_funcionario " precision="11" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+    <column id="COL11" populated="true" UUID="aa87eb75-11d7-4dbf-adf2-8272118527a4" autoIncrement="false" autoIncrementSequenceName="funcionario_cpf_funcionario _seq" defaultValue="" name="cpf_funcionario " nullable="0" physicalName="cpf_funcionario_" precision="11" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
      <remarks>CPF do funcionário. Faz parte da PK desta tabela e é uma FK para a tabela funcionário</remarks>
     </column>
     <column id="COL12" populated="true" UUID="34cf6c3e-043e-4fc9-a33f-1d6aa5616c3c" autoIncrement="false" autoIncrementSequenceName="dependente_nome_dependente_seq" defaultValue="" name="nome_dependente" nullable="0" physicalName="nome_dependente" precision="15" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -64,7 +64,7 @@
     </folder>
     <folder id="FOLTAB104" populated="true" name="Indices" physicalName="Indices" type="4">
     <index id="IDX16" populated="true" UUID="5655cea1-35c2-47b6-b894-0fd0289bd689" clustered="false" name="dependente_pk" physicalName="dependente_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC17" populated="true" UUID="8f4fb947-4fe8-457e-8a5b-8a8f463469ab" ascendingOrDescending="UNSPECIFIED" column-ref="COL11" name="cpf_funcionario " physicalName="cpf_funcionario " />
+     <index-column id="IDC17" populated="true" UUID="8f4fb947-4fe8-457e-8a5b-8a8f463469ab" ascendingOrDescending="UNSPECIFIED" column-ref="COL11" name="cpf_funcionario " physicalName="cpf_funcionario_" />
      <index-column id="IDC18" populated="true" UUID="39d2fd56-4eb8-40d9-8735-7fc13b302c02" ascendingOrDescending="UNSPECIFIED" column-ref="COL12" name="nome_dependente" physicalName="nome_dependente" />
     </index>
    </folder>
@@ -96,7 +96,7 @@
     <column id="COL27" populated="true" UUID="512f3d94-9fbe-4e70-bb37-3d272a382bb4" autoIncrement="false" autoIncrementSequenceName="funcionario_salario_seq" defaultValue="" name="salario" nullable="1" physicalName="salario" precision="10" referenceCount="1" scale="2" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>Salário do Funcionário.</remarks>
     </column>
-    <column id="COL28" populated="true" UUID="599c8d1d-7cc0-4196-8e22-2a7fa4fa8105" autoIncrement="false" autoIncrementSequenceName="funcionario_cpf_seq" defaultValue="" name="cpf_supervisor" nullable="0" physicalName="cpf_supervisor" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+    <column id="COL28" populated="true" UUID="599c8d1d-7cc0-4196-8e22-2a7fa4fa8105" autoIncrement="false" autoIncrementSequenceName="funcionario_cpf_seq_1" defaultValue="" name="cpf_supervisor" nullable="0" physicalName="cpf_supervisor" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
      <remarks>CPF do supervisor. Será uma FK para a própria tabela (um auto-relacionamento).</remarks>
     </column>
     <column id="COL29" populated="true" UUID="041f6164-3c3d-44b9-9492-e6470dfa57cb" autoIncrement="false" autoIncrementSequenceName="funcionario_numero_departamento_seq" defaultValue="" name="numero_departamento" nullable="0" physicalName="numero_departamento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
@@ -216,12 +216,12 @@
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="993" y="202" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB10" x="176" y="533" bgColor="0xc7d0df" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB10" x="164" y="535" bgColor="0xc7d0df" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB19" x="190" y="95" bgColor="0xc7d0df" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB32" x="906" y="20" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB38" x="1022" y="467" bgColor="0xfbdabb" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB47" x="712" y="665" bgColor="0xfbdabb" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-link relationship-ref="REL58" pkConnection="0.15040650406504066" fkConnection="0.9166666666666666" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL58" pkConnection="0.15040650406504066" fkConnection="0.7" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="33"/>
   <table-link relationship-ref="REL54" pkConnection="0.5067024128686327" fkConnection="0.49343832020997375" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="72"/>
   <table-link relationship-ref="REL60" pkConnection="0.2716049382716049" fkConnection="0.8780487804878049" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="36"/>
   <table-link relationship-ref="REL62" pkConnection="0.5617283950617284" fkConnection="0.4627659574468085" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="132"/>
